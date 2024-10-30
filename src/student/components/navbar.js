@@ -1,6 +1,35 @@
+import { Link } from "react-router-dom";
+
+// Assets
+import Logo from '../../assets/img/logo.png';
+
+// CSS
+import '../../assets/css/student/navbar.css';
+
 const Navbar = () => {
   return(
-    <>navbar</>
+    <>
+      <nav>
+        <div className="left">
+          <img src={Logo} alt="logo"/>
+          <h1>UPHSD Calamba</h1>
+        </div>
+        <div className="right">
+          <div className="nav-group">
+            <Link to='/student'>Home</Link>
+          </div>
+          <div className="nav-group">
+            <Link to='/student/curriculum'>Curriculum</Link>
+          </div>
+          <div className="nav-group">
+            <Link>Account Settings</Link>
+          </div>
+          <div className="nav-group">
+            <Link>Logout</Link>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 }
 

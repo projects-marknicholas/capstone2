@@ -14,6 +14,7 @@ import ResetPassword from './auth/reset-password';
 
 // Student
 import StudentHome from './student/home';
+import StudentCurriculum from './student/curriculum';
 
 function App() {
   return (
@@ -21,13 +22,15 @@ function App() {
       <Router>
         <Routes>
           {/* Auth */}
+          <Route path='/' element={ <Login/> }/>
           <Route path='/auth/login' element={ <Login/> }/>
           <Route path='/auth/register' element={ <Register/> }/>
           <Route path='/auth/forgot-password' element={ <ForgotPassword/> }/>
           <Route path='/auth/reset-password' element={ <ResetPassword/> }/>
 
           {/* Student */}
-          <Route path='/student/home' element={ <StudentHome/> }/>
+          <Route path='/student/' element={ <StudentHome/> }/>
+          <Route path='/student/curriculum' element={ <StudentCurriculum/> }/>
         </Routes>
       </Router>
     </>
