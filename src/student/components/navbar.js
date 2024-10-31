@@ -22,10 +22,10 @@ const Navbar = () => {
             <Link to='/student/curriculum'>Curriculum</Link>
           </div>
           <div className="nav-group">
-            <Link>Account Settings</Link>
+            <Link to='/student/account'>Account Settings</Link>
           </div>
           <div className="nav-group">
-            <Link>Logout</Link>
+            <Link to='/'>Logout</Link>
           </div>
         </div>
       </nav>
