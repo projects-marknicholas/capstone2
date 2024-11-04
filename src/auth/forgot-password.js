@@ -1,5 +1,5 @@
 // Hooks
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 // Assets
@@ -9,6 +9,11 @@ import Logo from '../assets/img/logo.png';
 import '../assets/css/auth.css';
 
 const ForgotPassword = () => {
+
+  useEffect(() => {
+    document.title = 'Forgot Password - UPSHD Calamba School Automate';
+  });
+
   return(
     <>
       <div className="auth">

@@ -1,5 +1,5 @@
 // Hooks
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 
 // Assets
 import Logo from '../assets/img/logo.png';
@@ -8,6 +8,11 @@ import Logo from '../assets/img/logo.png';
 import '../assets/css/auth.css';
 
 const ResetPassword = () => {
+
+  useEffect(() => {
+    document.title = 'Reset Password - UPSHD Calamba School Automate';
+  });
+
   return(
     <>
       <div className="auth">

@@ -26,6 +26,15 @@
   overflow: hidden;
   margin: auto;
   margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.account-settings .change-photo .image img{
+  height: 100%;
+  width: auto;
+  max-width: 100%; 
+  object-fit: cover;
 }
 .account-settings .change-photo button{
   position: relative;

@@ -1,6 +1,9 @@
 // Hooks
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
+// Components
+import Swal from 'sweetalert2';
 
 // Assets
 import Logo from '../assets/img/logo.png';
@@ -9,11 +12,57 @@ import MicrosoftSvg from '../assets/svg/microsoft.svg';
 // CSS
 import '../assets/css/auth.css';
 
+// API
+import { login } from '../integration/auth';
+
 const Login = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    email: "",
+    password: ""
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Send form data as JSON
+    const { 
+      email, 
+      password 
+    } = formData;
+
+    // This object should match the expected structure in your PHP backend
+    const result = await login({
+      email,
+      password
+    });
+
+
+    // Handle response
+    if (result.status === 'success') {
+      Swal.fire('Success!', result.message, 'success');
+      localStorage.setItem('user', JSON.stringify(result.user));
+      navigate(`/${result.user.role}`);
+    } else {
+      Swal.fire('Error!', result.message, 'error');
+    }
+  };
+
+  useEffect(() => {
+    document.title = 'Login - UPSHD Calamba School Automate';
+  });
+
   return(
     <>
       <div className="auth">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="logo">
             <img src={Logo} alt='logo' />
             <h1>UPSHD Calamba School Automate</h1>
@@ -30,6 +79,8 @@ const Login = () => {
                 autoComplete='off'
                 name='email'
                 id='email'
+                value={formData.email}
+                onChange={handleChange}
               />
             </label>
             <label>
@@ -39,6 +90,8 @@ const Login = () => {
                 autoComplete='off'
                 name='password'
                 id='password'
+                value={formData.password}
+                onChange={handleChange}
               />
             </label>
           </div>
