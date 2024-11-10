@@ -1,0 +1,21 @@
+:root{
+  --bg: #f9f9f9;
+}
+.admin-section{
+  height: calc(100vh - 40px);
+  padding: 20px;
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+.admin-divider{
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  margin-top: 20px;
+}
+.admin-divider .admin-main{
+  margin-left: 20px;
+  width: 100%;
+  flex-grow: 1;
+}

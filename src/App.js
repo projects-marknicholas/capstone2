@@ -17,6 +17,12 @@ import StudentHome from './student/home';
 import StudentCurriculum from './student/curriculum';
 import AccountSettings from './student/account';
 
+// Admin
+import AdminHome from './admin/home';
+import AdminStudents from './admin/students';
+import AdminSubjects from './admin/subjects';
+import AdminAccounts from './admin/accounts';
+
 function App() {
   return (
     <>
@@ -33,6 +39,12 @@ function App() {
           <Route path='/student/' element={ <StudentHome/> }/>
           <Route path='/student/curriculum' element={ <StudentCurriculum/> }/>
           <Route path='/student/account' element={ <AccountSettings/> }/>
+
+          {/* Admin */}
+          <Route path='/admin' element={ <AdminHome/> }/>
+          <Route path='/admin/students' element={ <AdminStudents/> }/>
+          <Route path='/admin/subjects' element={ <AdminSubjects/> }/>
+          <Route path='/admin/accounts' element={ <AdminAccounts/> }/>
         </Routes>
       </Router>
     </>
