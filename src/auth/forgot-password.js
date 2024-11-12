@@ -11,7 +11,7 @@ import '../assets/css/auth.css';
 const ForgotPassword = () => {
 
   useEffect(() => {
-    document.title = 'Forgot Password - UPSHD Calamba School Automate';
+    document.title = 'Forgot Password - Course Monitoring and Curriculum Tracking System';
   });
 
   return(
@@ -20,7 +20,7 @@ const ForgotPassword = () => {
         <form>
           <div className="logo">
             <img src={Logo} alt='logo' />
-            <h1>UPSHD Calamba School Automate</h1>
+            <h1>Course Monitoring and Curriculum Tracking System</h1>
           </div>
           <div className="header">
             <h1>Forgot Password</h1>

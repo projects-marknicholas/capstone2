@@ -21,8 +21,8 @@ const AdminNavbar = () => {
         <div className="left">
           <img src={Logo}/>
           <div className="admin-nav-info">
-            <p>UPHSD Calamba</p>
-            <span>School Automate</span>
+            <p>UPHSD</p>
+            <span>Course Monitoring and Curriculum Tracking System</span>
           </div>
         </div>
         <div className="right">

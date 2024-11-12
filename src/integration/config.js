@@ -13,4 +13,8 @@ export const endpoints = {
   updateStudent: `${BASE_URL}/api/student/user`,
   getStudent: `${BASE_URL}/api/student/user`,
   verifyStudent: `${BASE_URL}/api/student/verification`,
+
+  // Admin
+  getAccounts: `${BASE_URL}/api/admin/accounts`,
+  updateAccounts: `${BASE_URL}/api/admin/accounts`,
 };

@@ -56,7 +56,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    document.title = 'Login - UPSHD Calamba School Automate';
+    document.title = 'Login - Course Monitoring and Curriculum Tracking System';
   });
 
   return(
@@ -65,7 +65,7 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <div className="logo">
             <img src={Logo} alt='logo' />
-            <h1>UPSHD Calamba School Automate</h1>
+            <h1>Course Monitoring and Curriculum Tracking System</h1>
           </div>
           <div className="header">
             <h1>Welcome Back!</h1>
